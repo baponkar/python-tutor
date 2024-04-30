@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+  }
+
+  html, body {
+	padding: 0;
+	margin: 0;
+  }
+
+  html {
+	height: 100vh;
+	width: 100vw;
+  }
+
+  h1{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #f0f0f0;
+  }
+
+  h2{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #f0f0f0;
+  }
+
+  p{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #f0f0f0;
+  }
+
+ #equation{
+	color: #f0f0f0;
+	font-family: 'Courier New', Courier, monospace;
+  }
+  
+  body {
+	font-family: Roboto, Sans-serif;
+	background-color: #1f1f1f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+	flex-direction: column; /* Change from row to column */
+  }
+  
+  .codebox {
+    background-color: #222;
+    border-radius: 12px;
+    max-width: 100%;
+    min-width: 50%;
+    box-shadow: 1px 3px 18px 0 rgba(#222, 0.5);
+}
+
+.codebox header {
+    padding: 12px 15px;
+    background-color: #444;
+    border-radius: 12px 12px 0 0;
+    line-height: 0;
+}
+
+.codebox header span {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.codebox header span:nth-child(1) {
+    background-color: #ff5c5c;
+}
+
+.codebox header span:nth-child(2) {
+    background-color: #ffbd4c;
+}
+
+.codebox header span:nth-child(3) {
+    background-color: #00ca56;
+}
+
+.codebox code {
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: left !important; /* Ensure code is left-aligned */
+}
+
+.codebox code pre {
+    text-align: left !important; /* Override center alignment for pre content */
+}
+
+
+  
+
+.rounded-rectangle {
+    min-width: none;
+    max-width: 95%; /* Maximum width to prevent it from stretching too much on larger screens */
+
+    background-color: #423f3f; /* Background color */
+    border-radius: 20px; /* Adjust border-radius to control the roundness of corners */
+    padding: 20px; /* Adjust padding as needed */
+    overflow: auto; /* Add overflow auto to enable vertical scrolling if content exceeds height */
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .rounded-rectangle {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove maximum width restriction */
+    }
+}
+
+#snowflake-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.snowflake {
+	position: absolute;
+	font-size: 25px;
+	color: #fff;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100vh);
+	}
+}
+
+.rounded-image {
+	border-radius: 5%; /* Make the border radius 50% to create a circle */
+	
+}
+
+
+
+
+     

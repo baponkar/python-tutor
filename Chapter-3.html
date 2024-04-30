@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title-->
+    <title>Chapter 3 : Data Structure</title>
+
+    <!--Favicon Icon-->
+    <link rel="icon" type="image/png" href="Images/favicon_py.png">
+
+    <!--CSS Style-->
+    <link rel="stylesheet" href="Style/style_code.css">
+
+    <!--MathJax-->
+    <!-- Load MathJax from CDN -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--Prism to show colorful code-->
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+
+    <!--MathJax Rendering Script-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body>
+
+
+  <body>
+
+    <!--Animated background-->
+    <div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+    </div>
+
+    
+    
+    <h1>Python3 Tutorials</h1>
+    
+
+    <div class="rounded-box">
+       <h1>Data Structure</h1>
+       <p>
+        Python have four type data structures which can hold large numbers variables value.They are List, Tuples, Dictionary, and Set.
+       </p>
+
+       <h1>List</h1>
+       <p>List are good for keeping track of things by their orders, especially when the order and content might change.Unlike strings, list are mutable. We can add a new element, delete an element or change an element.We can create a new list by [] and list().</p>
+
+        <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> empty_list = []
+                >>> weekdays = ["Monday", "Tuesday", "Wednusday", "Thursday", "Friday"] 
+                >>> numbers = [12,56,89.89,67,True]
+                >>> list_of_list = [weekdays, numbers] 
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Converting other data types into list</h1>
+          <p> We can convert other data type into list by list().</p>
+
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> list("Mad")
+                ['M', 'a', 'd']
+                >>> list("Hello There")
+                ['H', 'e', 'l', 'l', 'o', ' ', 'T', 'h', 'e', 'r', 'e']
+                >>> a_tuple = ("cat", "dog", "python")
+                >>> list(a_tuple)
+                ['cat', 'dog', 'python'] 
+                >>> birthday = "01/06/2024"
+                >>> birthday.split("/")
+                >>> ['01', '06', '2024']
+                >>> splitme = 'a/b//c/d//e'
+                >>> splitme.split("/")
+                >>> ['a', 'b', '', 'c', 'd', '', 'e']
+                >>> splitme.split("//")
+                ['a/b', 'c/d', 'e']
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Get an Item by Index</h1>
+          <p> We can get total number item of a list by len().Every item has a index in a list. The first item's index is 0.The Second item's index is 1 and so on.We can also change or update an item by it's index.</p>
+
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> weekdays = ["Monday", "Tuesday", "Wednusday", "Thursday", "Friday"] 
+                >>> total_no_of_weekdays = len(weekdays)
+                >>> total_no_of_weekdays
+                5
+                >>> weekdays[0] 
+                'Monday'
+                >>> weekdays[5-1] 
+                'Friday'
+                >>> weekdays[0] = "Sunday"
+                >>> weekdays
+                ["Sunday", "Tuesday", "Wednusday", "Thursday", "Friday"] 
+                >>> first_fourdays = weekdays[0:4] 
+                ['Sunday', 'Tuesday', 'Wednusday', 'Thursday']
+                >>> weekdays[0:4:2] #Skipping 1
+                ['Sunday', 'Wednusday']
+                >>> weekdays[4:0:-2] # moving from fourth index to zeroth index in reverse order by skipping 1
+                ['Friday', 'Wednusday']
+                >>>
+
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>append(),extend() or +,insert(),del,remove(),pop(),index,count</h1>
+          <p>we can append a new element in last position by append().
+             We can also add two list and make a single list by extend() or +. 
+             We can insert a new element at any position by insert().
+             we can delete an element by del, remove() and  pop() function.
+             We can get the index value of an element of a list by value.
+             The total number of an element present in a list.
+             We can also check presence of a value in a list by 'in'.
+          </p>
+
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> l = ['a', 'b', 'c', 'd']
+                >>> l.append("e")
+                >>> l 
+                ['a', 'b', 'c', 'd', 'e']
+                >>> m = ['g', 'h'] 
+                >>> l.extend(m)
+                >>> l 
+                ['a', 'b', 'c', 'd', 'e', 'g', 'h']
+                >>> m 
+                ['g', 'h'] 
+                >>> l += ['k', 'l']
+                >>> l 
+                ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'k', 'l']
+                >>> new_list =  ['aab', 'ttt']
+                >>> new_list.insert(1,"tab")
+                >>> new_list
+                ['aab', 'ttt', 'tab']
+                >>> new_list.remove('tab')
+                >>> new_list 
+                ['aab', 'ttt']
+                >>> new_list.pop()
+                'ttt'
+                >>> new_list 
+                ['aab']
+                >>> find = ["Hulo", "Ram", "Tonu"] 
+                >>> find.index("Ram")
+                1
+                >>> l 
+                ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'k', 'l']
+                >>> del l[0]
+                >>> l 
+                ['b', 'c', 'd', 'e', 'g', 'h', 'k', 'l']
+                >>> l.count('e')
+                1 
+                >>>l.index('k')
+                6
+                >>> 'g' in l
+                True 
+                >>> "kkkk" in l 
+                False
+
+
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Tuples </h1>
+          <p> we can create a tuples by (). Tuples are basically constant storage of elemen variables . The element are not changable i.e. not editable, addable, removable.Basically tuples are used to store password,otp etc.We can sort the elements of a list by sort().</p>
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> empty_tuple = ()
+                >>> tup = "Hello",
+                >>> tup1 = ("bapon", "Bittu")
+                >>> tup1[0]
+                'bapon'
+                >>> a,b = tup1 
+                >>> a 
+                'bapon' 
+                >>> b 
+                'Bittu'
+                >>> 'bapon' in tup1
+                True
+                >>> a_list = ["kartik", "Sarala", "Mala", "Sarala"]
+                >>> name = tuple(a_list)
+                >>> len(name)
+                4
+                >>> name[2]
+                'Mala'
+                >>> name.index("Mala")
+                2
+                >>> name.sort()
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Making string from list</h1>
+          <p>Converting a list to a string by join().</p>
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> animals = ['Cat', 'Dog', 'Rat', 'Ant']
+                >>> st = ','.join(animals)
+                >>> st 
+                >>> 'Cat,Dog,Rat,Ant'
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Dictionaries</h1>
+          <p> A dictionary is similar to a list, but the orders of items does't matter, and they aren't selected by an offset such as 0 or 1.Instead, you specify a unique key to assoc iate with each value.This key is often a string, but it can actually be any of Python's immutable types: boolean, integer, float,tuple,string, and others that you will see in later chapters.Dictionaries are mutable so we can add, delete and change their key-value elements.</p>
+          <h1>Creation Dictionary</h1>
+          <p> We can create a new dictionary by dict() or {} with giving key and value.</p>
+
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> empty_dict = {}
+                >>> a_dict = {"name": "Ram", "Age": 35, "Nationality":"Indian", "pan": "GHKL1234"} 
+                >>> a_list = [['a',98],['b',45],["c",7]]
+                >>> new_dict = dict(a_list)
+                >>> new_dict 
+                {'a': 98, 'b': 45, 'c': 7}
+
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Dictionary manipulation</h1>
+          <p>We can add a item with key and value.We can delete an item by key with del.We can add new items from another dictionary to a dictionary by update().Delete all items by clear().We can check presence a key by in.We can get all keys by keys() and get all values by values(). </p>
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> a_dict = {"name": "Ram", "Age": 35, "Nationality":"Indian", "pan": "GHKL1234"} 
+                >>> a_dict["Height"] = "5.4ft"
+                >>> a_dict 
+                {'name': 'Ram', 'Age': 35, 'Nationality': 'Indian', 'pan': 'GHKL1234', 'Height': '5.4ft'}
+                >>> del a_dict['Age']
+                >>> a_dict 
+                >>> {'name': 'Ram', 'Nationality': 'Indian', 'pan': 'GHKL1234', 'Height': '5.4ft'}
+                >>> other = {"Address": "5,Circular Baligunj Road,Kolkata-700089", "Bank": "UBI"}
+                >>> other.clear()
+                >>> other 
+                >>> {}
+                >>> 'pan' in a_dict 
+                >>> True
+                >>> list(a_dict.keys())
+                >>> ['name', 'Age', 'Nationality', 'pan'] 
+                >>> list(a_dict.values())
+                >>> ['Ram', 'Indian', 'GHKL1234', '5.4ft']
+                >>> list(a_dict.items())
+                [('name', 'Ram'), ('Nationality', 'Indian'), ('pan', 'GHKL1234'), ('Height', '5.4ft')]
+                >>>
+
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          <h1>Sets</h1>
+          <p>A set is like a dictionary with its values thrown away.The set only have containing unique element.We can create set by set() or {}.</p>
+
+          <div class="codebox">
+            <header>
+              <span></span>
+              <span></span>
+              <span></span>
+            </header>
+      
+            <!---->
+            <pre>
+              <code class="language-python">
+                <!---->
+                >>> empty_set = set()
+                >>> empty_set
+                set()
+                >>> even_numbers = {0,2,4,6,8,10}
+                >>> a_set = set('Kalbosh')
+                {'b', 'l', 'a', 's', 'o', 'K', 'h'}
+                
+
+                <!---->
+              </code>
+            </pre>
+          </div>
+
+          
+          
+
+    </div>
+
+    
+    
+  <p>Copyright &copy; Bapon Kar</p>
+</body>
+</html>

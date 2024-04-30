@@ -1,0 +1,305 @@
+/* Define a color variable */
+:root {
+    --white-blue: #DFF5FF; /* light color */
+    --light-green: #67C6E3;
+    --deep-green: #378CE7;
+    --sky-blue: #5356FF;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+  
+html{
+    background-color: linear-gradient(45deg , var(--deep-green), var(--sky-blue)); /* Gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Bagel Fat One", sans-serif;
+    background: linear-gradient(45deg , var(--deep-green), var(--sky-blue)); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    border-radius: 10%;
+    align-content: center;
+}
+
+header {
+    background-color: var(--sky-blue);
+    color: var(--white-blue);
+    padding: 5px;
+    text-align: center;
+    background: linear-gradient(45deg,  var(--deep-green), var(--sky-blue)); /* Gradient background */
+}
+
+nav {
+    background-color: var(--light-green);
+    color: var(--white-blue);
+    padding: 10px;
+}
+
+
+nav a {
+    color: var(--white-blue);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Add CSS for navigation animation */
+#mainNav {
+    overflow: hidden;
+    background-color: var(--deep-green);
+    align-content: center;
+}
+
+#mainNav a {
+    float: left;
+    display: block;
+    color: var(--white-blue);
+    text-align: center;
+    padding: 7px 8px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+#mainNav a:hover {
+    background-color: var(--light-green);
+    color: var(--deep-green);
+    border-radius: 10%;
+}
+
+
+section {
+    background: linear-gradient(45deg , var(--deep-green), var(--sky-blue)); /* Gradient background */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
+
+    h2{
+        color: var(--white-blue);
+    }
+    p{
+        color: var(--white-blue);
+    }
+}
+
+footer {
+    background: linear-gradient(45deg , var(--deep-green), var(--sky-blue)); /* Gradient background */
+    color: var(--white-blue);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* For tablets and desktop */
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav a {
+        margin: 0 20px;
+    }
+}
+
+anim_text{
+	color: var(--white-blue);
+}
+
+#equation{
+	color: #f0f0f0;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+@import "compass/css3";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+
+.text-center {
+  text-align: center;
+}
+
+*, *:before, *:after {
+	-webkit-border-sizing: border-box;
+	-moz-border-sizing: border-box;
+	border-sizing: border-box;
+}
+
+.container {
+	width: 350px;
+	margin: 50px auto;
+  
+  & > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+}
+
+
+
+@mixin ul-nostyle {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin double-shadow($color) {
+	@include box-shadow(0 1px 0 lighten($color, 10%) inset, 0 -1px 0 darken($color, 10%) inset);
+}
+
+@mixin hover-style($color) {
+	&:hover {
+		background: lighten($color, 3%);
+	}
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+}
+
+
+.title {
+  font-family: 'Pacifico';
+  font-weight: norma;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.4;
+  color: var(--white-blue);
+}
+
+.dropdown {
+	a {
+		text-decoration: none;
+	}
+
+	[data-toggle="dropdown"] {
+		position: relative;
+		display: block;
+		color: white;
+		background: var(--deep-green);
+		@include double-shadow(#2980B9);
+		@include hover-style(#2980B9);
+		@include text-shadow(0 -1px 0 rgba(0,0,0,0.3));
+		padding: 10px;
+
+	}
+	.icon-arrow {
+		position: absolute;
+		display: block;
+		font-size: 0.7em;
+		color: #fff;
+		top: 14px;
+		right: 10px;
+
+		&.open {
+			@include transform(rotate(-180deg));
+			@include transition(transform .6s);
+		}
+		&.close {
+			@include transform(rotate(0deg));
+			@include transition(transform .6s);
+		}
+
+		&:before {
+			content: '\25BC';
+		}
+	}
+
+	.dropdown-menu {
+		max-height: 0;
+		overflow: hidden;
+		@include ul-nostyle;
+
+		li {
+			padding: 0;
+
+			a {
+				display: block;
+				color: darken(#EEE, 50%);
+				background: var(--white-blue);
+				@include double-shadow($gray);
+				@include hover-style($gray);
+				@include text-shadow(0 -1px 0 rgba(255,255,255,0.3));
+				padding: 10px 10px;
+			}
+		}
+	}
+
+	.show, .hide {
+		@include transform-origin(50%, 0%);
+	}
+
+	.show {
+		display: block;
+		max-height: 9999px;
+		@include transform(scaleY(1));
+		@include animation(showAnimation .5s ease-in-out);
+		@include transition(max-height 1s ease-in-out);
+	}
+
+	.hide {
+		max-height: 0;
+		@include transform(scaleY(0));
+		@include animation(hideAnimation .4s ease-out);
+		@include transition(max-height .6s ease-out);
+	}
+}
+
+@include keyframes(showAnimation) {
+	0% {
+		@include transform(scaleY(0.1));
+	}
+	40% {
+		@include transform(scaleY(1.04));
+	}
+	60% {
+		@include transform(scaleY(0.98));
+	}
+	80% {
+		@include transform(scaleY(1.04));
+	}
+	100% {
+		@include transform(scaleY(0.98));
+	}				
+	80% {
+		@include transform(scaleY(1.02));
+	}
+	100% {
+		@include transform(scaleY(1));
+	}
+}
+
+@include keyframes(hideAnimation) {
+  0% {
+  	@include transform(scaleY(1));
+  }
+  60% {
+  	@include transform(scaleY(0.98));
+  }
+  80% {
+  	@include transform(scaleY(1.02));
+  }
+  100% {
+  	@include transform(scaleY(0));
+  }
+}

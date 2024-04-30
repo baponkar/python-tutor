@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Title-->
+    <title>Chapter - 2 : Variables</title>
+
+    <!--Favicon Icon-->
+    <link rel="icon" type="image/png" href="Images/favicon_py.png">
+
+    <!--CSS Style-->
+    <link rel="stylesheet" href="Style/style_code.css">
+
+    <!--MathJax-->
+    <!-- Load MathJax from CDN -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!--Prism to show colorful code-->
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+
+    <!--MathJax Rendering Script-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body>
+
+
+  <body>
+
+    <!--Animated background-->
+    <div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+    </div>
+
+    
+    
+    <h1>Python3 Tutorials</h1>
+    
+
+    <div class="rounded-box">
+        <h1>Variables</h1>
+        <p>
+            There are initialy four type variables in Python.Which have own importance.They are Booleans, Integers, Floats and String.Like numbers have prime, composite, integers, fraction etc. We can check the type of variables by 'type(var)'. The variables name can start by alphabet,special characters which are not used for python inbuilt function. The variable name is just an id where variables data stored which can be use later by python.
+        </p>
+
+        <div class="codebox">
+          <header>
+            <span></span>
+            <span></span>
+            <span></span>
+          </header>
+    
+          <!---->
+          <pre>
+            <code class="language-python">
+              <!---->
+              >>> bool_var = True #it's value either True or False
+              >>> int_var = 32 #0,1,2,56 etc
+              >>> float_var = 6.78 #point fraction
+              >>> string_var = "This is a String.We can use $*&_8655 as a string." #any alphanumerical along with special character
+              >>> type(bool_var)
+              &lt; class 'bool' &gt;
+              >>> type(int_var)
+              &lt; class 'int' &gt;
+              >>> type(float_var)
+              &lt; class 'float' &gt;
+              >>> type(string_var)
+              &lt; class 'str' &gt;
+
+              <!---->
+            </code>
+          </pre>
+        </div>
+
+        <h1>Boolean Variables</h1>
+        <p>
+            Boolean type variables have onlly two kind either 'True' or False.This variables are used to check a condition.The boolean variables can interchangable into integer or vice varsa. But There are many integers but only two integers 0 and 1 are interchangable into False and True respectively.But any other integer or float value except 0 will give True. True and False can changable into String 'True' and 'False'.
+        </p>
+
+        <div class="codebox">
+          <header>
+            <span></span>
+            <span></span>
+            <span></span>
+          </header>
+    
+          <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> bool_var = True 
+            >>> int(bool_var) #converting boolean to integer
+            1
+            >>> bool(1)  #converting integer into boolean
+            True
+            >>> bool(0) #converting integer into boolean
+            False
+            >>> bool(100)
+            True
+            >>> bool(-56)
+            True
+            >>> bool(9.78)
+            True
+            >>> str(True) #Changing Boolean to string
+            >>> 'True'
+            >>> bool('True') #Changing String to Boolean
+            True
+            >>>
+            <!---->
+          </code>
+        </pre>
+      </div>
+
+      <h1>Integers variables</h1>
+      <p>The natural numbers are represent by integers.They can also transform into float type or string type.Integer variables can be add, subtract,multiply, and divide by +,-,*,/ respectively.</p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> a = 26
+            >>> float(a) #Changing integer into float
+            2.0
+            >>> int(3.7) #Changing float into integer without approximation 
+            3
+            >>> int("678") #Changing numerical string into integer
+            678
+            >>> str(56) #Changing integer into String
+            '56'
+            >>> 2 + 5
+            >>> 7
+            >>> 6 - 11
+            >>> -5
+            >>> 4/7
+            >>> 0.5714285714285714
+            >>> int("78.89") #Will Show ValueError
+            Traceback (most recent call last):
+              File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+            ValueError: invalid literal for int() with base 10: '78.89'
+            >>>
+            <!---->
+          </code>
+        </pre>
+    </div>
+
+      <h1>Float variables</h1>
+      <p>Also float can be transformed into integer, , and  vice varsa.Float variables can be add, subtract,multiply, and divide by +,-,*,/ respectively.</p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> _rt = 2.6
+            >>> int(_rt)
+            2
+            >>> float(67)
+            67.0
+            >>> str(_rt)
+            '2.6'
+            >>> float('78.8906')
+            >>> 78.8906
+            >>> 2.3 + 3.2
+            >>> 5.5
+            >>> 45.76 - 78.8890
+            -33.129
+            >>> 56.78 * 89.56
+            5085.2168
+            >>> 23/89
+            0.25842696629213485
+            >>>
+            <!---->
+          </code>
+        </pre>
+    </div>
+
+    <h1>String Variables</h1>
+      <p>We can make string variable by enclosing double quote or single quote.String can hold all alphanumerical value along with special characters.</p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> _my_str = "This is a strinG $567@!?>"
+            >>> type(_my_str)
+            &lt;class 'str'&gt;
+            >>>
+            <!---->
+          </code>
+        </pre>
+    </div>
+
+    <h1>Taking input as string</h1>
+    <div class="codebox">
+      <header>
+        <span></span>
+        <span></span>
+        <span></span>
+      </header>
+
+      <!---->
+      <pre>
+        <code class="language-python">
+          <!---->
+          >>> my_string_input = input("Please input your string :")
+          >>> Please input your string :this is a string
+          >>> my_string_input
+          'this is a string'
+          >>>
+          <!---->
+        </code>
+      </pre>
+    </div>
+       
+    
+    <h1>String Manipulation</h1>
+      <p>Two String can be added by '+'.The * symbol to use make repetation of a string . The 'len' function will give the character length of a string.Each character have index.The First Character of the string have index 0, and next one have index one and so on.we can access each character by their index.Suppose you want to know what character placed at index = 5 position then you will get it by my_string[5].To access last character my_string[length -1] . As Length gives total numbers of characters present in the String.But their indexes starts from zero so last character index would be length -1.For invalid index showing IndexError. </p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> '5' + '2'
+            >>> '52'
+            >>> 'abc' + '234'
+            >>> 'abc234'
+            >>> 'top' * 3
+            >>> 'toptoptop'
+            >>> _my_str = "This is a strinG $567@!?>"
+            >>> l = len(_my_str) #Storing the value of  length of the string into variable l
+            >>> l #printing value of l 
+            25
+            >>> _my_str[5] #To get fifth character
+            'i'
+            >>> _my_str[l-1] #To get last character
+            '>'
+            <!---->
+          </code>
+        </pre>
+    </div>
+
+
+    <h1>Uses of escape character('\')</h1>
+      <p>'\n' will use to create a new line. '\t' will add tab in the string.'\\' will add '\' character into the string.'\'' is used to add a single quote.'\"' is used to add double quote into string. </p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> st = "This is 1\'st line.\nThis is a new line.\tThis is a tabbed line.\\,\""
+            >>> st 
+            'This is 1\'st line.\nThis is a new line.\tThis is a tabbed line.\\,"'
+            >>> print(st)
+            This is 1'st line.
+            This is a new line.     This is a tabbed line.\,"
+            <!---->
+          </code>
+        </pre>
+    </div>
+
+    <h1>Some more useful methotds to manipulate string variabls.</h1>
+      <p></p>
+      <div class="codebox">
+        <header>
+          <span></span>
+          <span></span>
+          <span></span>
+        </header>
+  
+        <!---->
+        <pre>
+          <code class="language-python">
+            <!---->
+            >>> test = "How are you?Do you have a boat?....If yes please use it."
+            >>> test.strip(".")
+            >>> 'How are you?Do you have a boat?....If yes please use it'
+            >>> test.capitalize()
+            >>> 'How are you?do you have a boat?....if yes please use it.'
+            >>> test.title()
+            >>> 'How Are You?Do You Have A Boat?....If Yes Please Use It.'
+            >>> test.upper()
+            >>> 'HOW ARE YOU?DO YOU HAVE A BOAT?....IF YES PLEASE USE IT.'
+            >>> test.lower()
+            >>> 'how are you?do you have a boat?....if yes please use it.'
+            >>> test.swapcase()
+            'hOW ARE YOU?dO YOU HAVE A BOAT?....iF YES PLEASE USE IT.'
+            >>> test.replace("boat", "cycle")
+            'How are you?Do you have a cycle?....If yes please use it.'
+            >>> setup = "a marmoset goes into a bar..."
+            >>> setup.replace("a", "famous", 100) #change upto 100th position
+            >>> 'a famous marmoset goes into a famous bar...'
+            >>> setup.startswith("a") #check is string start with a
+            True
+            >>> setup.endswith("bar") #Check the setup string ends with 'bar'
+            False
+            >>> setup.find("bar") #finding the position of 'bar'
+            23
+            >>> setup.rfind("a")
+            24
+            >>> setup.count("a") #counting total 'a' present in the setup string
+            4
+            >>> setup.isalnum() #check string is either containing all numericals or not
+            False
+            >>> 
+            <!---->
+          </code>
+        </pre>
+    </div>
+    
+          
+
+    </div>
+
+    
+    
+  <p>Copyright &copy; Bapon Kar</p>
+</body>
+</html>
