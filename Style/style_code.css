@@ -26,9 +26,9 @@ body {
     background-color: #625d5d;
     border: 2px solid #333;
     border-radius: 15px; /* Adjust the radius to change the roundness */
-    padding: 20px;
+    padding: 2px;
     box-sizing: border-box;
-    margin: 5%;
+    margin: 1%;
 
     h1{
         color: rgb(124, 124, 167);
