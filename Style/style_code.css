@@ -34,6 +34,10 @@ body {
         color: rgb(124, 124, 167);
     }
 
+    h2{
+        color: rgb(159, 126, 126);
+    }
+
     p{
         color: rgb(194, 186, 186);
     }
@@ -90,6 +94,14 @@ body {
 h1{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5%;
+}
+
+h2{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
     margin: 5%;
 }
 
